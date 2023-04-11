@@ -1,0 +1,107 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+	font-size: 14px;
+    line-height: 1.8;
+    background: linear-gradient(135deg, rgb(50, 50, 50), black);
+    background-color: rgb(43, 43, 43);
+    font-weight: 400;
+    font-family: "poppins", sans-serif;
+    margin: 0px;
+    // padding: 150px 0;
+}
+h1 {
+    margin: 20px;
+    font-family: "axiforma";
+    font-weight: 900;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 1px white;
+    color: rgb(43, 43, 43);
+    text-align: center;
+    text-transform: uppercase;
+}
+.form-group {
+    margin-bottom: 40px;
+    position: relative;
+    width: 100%;
+}
+.form-input {
+    z-index: 0;
+    transition: 0.5s;
+    border: none;
+    border-bottom: 0.5px solid rgb(190, 190, 190);
+    outline: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(43, 43, 43);
+    font-family: "Poppins", "helvetica", sans-serif;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.form-label {
+    position: absolute;
+    pointer-events: none;
+    padding-left: 5px;
+    font-size: 27px;
+    color: rgba($color: rgb(255, 255, 255), $alpha: 0.75);
+    text-transform: uppercase;
+    transition: 0.5s;
+    left: 0;
+}
+.form-group .form-input:valid ~ .form-label,
+.form-group .form-input:focus ~ .form-label{
+    // display: block;
+    color: cyan;
+    transform: translateY(-18px);
+    font-size: 15px;
+    padding: 0 6px;
+    background: rgb(53, 53, 53);
+    border-radius: 5px;
+}
+// .button{
+//     color: white;
+//     background-color: rgb(53, 53, 53);
+//     padding: 5px 0px;
+//     margin: 0px;
+//     width: 100%;
+//     transition: .5s;
+//     border-radius: 5px;
+//     border-width: 0.1em;
+//     border-color: rgba($color: cyan, $alpha: 0.5);
+//     &:hover{
+//         background-color: darken($color: rgb(53, 53, 53), $amount: 5%);
+//     }
+//     a{
+//         color: white;
+//         text-decoration: none;
+//     }
+// }
+.button {
+    width: 100%;
+    margin-bottom: 10px;
+    background: rgb(68, 68, 68);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: larger;
+    border: none;
+    border-radius: 5pt;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover {
+        background: rgba($color: cyan, $alpha: 0.75);
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+p{
+    color: red;
+    text-align: center;
+}

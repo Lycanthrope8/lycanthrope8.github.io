@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+	font-size: 14px;
+    line-height: 1.8;
+    background: linear-gradient(135deg, rgb(50, 50, 50), black);
+    font-weight: 400;
+    font-family: "poppins", sans-serif;
+    margin: 0px;
+    // padding: 150px 0;
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+// form{
+     // position: relative;
+    
+     // display: flex;
+     // justify-content: center;
+// }
+.form-group {
+    margin-bottom: 10px;
+    position: relative;
+    width: 250px;
+    .fn .mn {
+        display: flex;
+        width: 50%;
+    }
+}
+// .form-input {
+//     padding-top: 21px;
+// }
+input {
+    //@include transition(.3s ease);
+    // display: flex;
+    // border: none;
+    // border-bottom: 2px solid white;
+    // outline: none;
+    width: 100%;
+    background-color: unset;
+    font-family: "Poppins", "helvetica", sans-serif;
+    font-size: 1em;
+    color: #fff;
+    font-weight: bold;
+    //min-width: 60vmin;
+}
+
+.form-label {
+        //@include transition(.25s ease);
+        text-transform: uppercase;
+        position: absolute;
+        color: rgba($color: white, $alpha: 0.25);
+        left: 0;
+}
+
+.form-input:focus + .form-label, .form-input:not(:placeholder-shown) + .form-label{
+    transform: translateX(1em) scale(0.8);
+}
+.submit {
+    width: auto;
+    background: rgb(68, 68, 68);
+    color: #fff;
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: large;
+    border: none;
+    border-radius: 5pt;
+    //@include border-radius(5px);
+    cursor: pointer;
+    &:hover {
+        background: darken(yellow, 10%);
+    }
+}

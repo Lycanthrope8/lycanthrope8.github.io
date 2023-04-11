@@ -1,0 +1,303 @@
+:root {
+  --primary: #546a7b;
+}
+
+body {
+  background-color: #393d3f;
+}
+
+h1 {
+  background-color: var(--primary);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.2s;
+  text-align: center;
+  cursor: pointer;
+}
+h1:hover {
+  background-color: #ff8756;
+}
+
+.todo {
+  background-color: #ff692e !important;
+}
+
+a {
+  transition: 0.1s;
+  font-family: "axiforma";
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
+
+h3 {
+  color: rgb(232, 232, 232);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.form-group {
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.form-input {
+  z-index: 0;
+  transition: 0.5s;
+  border: none;
+  border-bottom: 0.5px solid rgb(190, 190, 190);
+  outline: none;
+  border-radius: 5px;
+  height: 50px;
+  width: 100%;
+  padding-left: 5px;
+  background-color: rgb(43, 43, 43);
+  font-family: "Poppins", "helvetica", sans-serif;
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.form-label, .form-label-cat {
+  position: absolute;
+  pointer-events: none;
+  padding-left: 5px;
+  font-size: 20px;
+  vertical-align: center;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  transition: 0.5s;
+  top: 8px;
+  left: 0;
+}
+
+.dt, .tm {
+  color: cyan;
+  transform: translateY(-18px);
+  font-size: 15px;
+  padding: 0 6px;
+  background: rgb(53, 53, 53);
+  border-radius: 5px;
+}
+
+.form-group .form-input:valid ~ .form-label,
+.form-group .form-input:focus ~ .form-label {
+  color: cyan;
+  transform: translateY(-18px);
+  font-size: 15px;
+  padding: 0 6px;
+  background: rgb(53, 53, 53);
+  border-radius: 5px;
+}
+
+.dropdown {
+  position: relative;
+  width: 300px;
+  height: 50px;
+}
+
+.dropdown::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 10000;
+  width: 8px;
+  height: 8px;
+  border: 2px solid rgb(43, 43, 43);
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.dropdown.active::before {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+
+.dropdown.active .form-label-cat,
+.form-group .form-input:valid ~ .form-label-cat {
+  color: cyan;
+  transform: translateY(-18px);
+  font-size: 15px;
+  padding: 0 6px;
+  background: rgb(53, 53, 53);
+  border-radius: 5px;
+}
+
+.option.active .form-label-cat {
+  position: absolute;
+  bottom: 20px;
+  color: red;
+}
+
+.dropdown input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: rgb(43, 43, 43);
+  border: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.dropdown .option {
+  position: absolute;
+  top: 36px;
+  width: 100%;
+  background: rgb(43, 43, 43);
+  font-size: 15px;
+  font-weight: 600;
+  vertical-align: center;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10;
+  overflow: hidden;
+  display: none;
+}
+
+.dropdown.active .option {
+  display: block;
+}
+
+.dropdown .option div {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.dropdown .option div:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: white;
+  font-size: 16px;
+}
+
+.infotable {
+  border-collapse: collapse;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.infotable .tab-head {
+  background-color: #343a40;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+}
+.infotable .tab-items {
+  padding: 0.5rem 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+.infotable .tab-items a {
+  color: white;
+  text-decoration: none;
+}
+.infotable .tab-items i {
+  color: rgb(69, 69, 69);
+}
+.infotable tr:nth-child(even) {
+  background-color: #A5C9CA;
+  color: black;
+}
+.infotable tr:nth-child(odd) {
+  background-color: #E7F6F2;
+  color: black;
+}
+.infotable tr:nth-child(even) i {
+  color: white;
+}
+
+.button {
+  width: 100%;
+  margin-bottom: 10px;
+  background: rgb(68, 68, 68);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+  border: none;
+  border-radius: 5pt;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.button:hover {
+  background: rgba(0, 255, 255, 0.75);
+}
+.button a {
+  color: white;
+  text-decoration: none;
+}
+
+.add-btn {
+  background-color: rgb(105, 175, 0);
+}
+
+.update-btn {
+  background-color: rgb(228, 148, 0);
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+td {
+  border-style: none solid solid none;
+  padding: 10px;
+}
+
+tr:first-child td:first-child {
+  border-top-left-radius: 7px;
+}
+
+tr:first-child td:last-child {
+  border-top-right-radius: 7px;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius: 7px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius: 7px;
+}
+
+td:first-child {
+  border-top-left-radius: 7px;
+}
+
+td:last-child {
+  border-top-right-radius: 7px;
+}
+
+th:first-child {
+  border-top-left-radius: 7px;
+}
+
+th:last-child {
+  border-top-right-radius: 7px;
+}
+
+th:first-child {
+  border-bottom-left-radius: 7px;
+}
+
+th:last-child {
+  border-bottom-right-radius: 7px;
+}/*# sourceMappingURL=todo.css.map */

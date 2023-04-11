@@ -1,0 +1,245 @@
+// body{
+//     background: linear-gradient(135deg, rgb(50, 50, 50), black);
+//     background-color: rgb(43, 43, 43);
+//     min-height: 100vh;
+//     margin: 0;
+//     padding: 0;
+// }
+.home{
+    background-color: darken($color: lightsalmon, $amount: 15%) !important;
+}
+h1{
+    background-color: lightsalmon;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.2s;
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+    &:hover{
+        background-color: darken($color: lightsalmon, $amount: 7%);
+    }
+}
+a{
+    transition: 0.1s;
+    font-family: "axiforma";
+    color: black;
+    text-decoration: none;
+    &:hover{
+        color: white;
+    }
+}
+.form-group {
+    margin-bottom: 40px;
+    position: relative;
+    width: 100%;
+}
+.form-input {
+    z-index: 0;
+    transition: 0.5s;
+    border: none;
+    // border-bottom: 0.5px solid rgb(190, 190, 190);
+    outline: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    padding-left: 5px;
+    background-color: rgb(43, 43, 43);
+    font-family: "Poppins", "helvetica", sans-serif;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.form-label, .form-label-cat  {
+    position: absolute;
+    pointer-events: none;
+    padding-left: 5px;
+    font-size: 20px;
+    vertical-align: center;
+    color: rgba($color: rgb(255, 255, 255), $alpha: 0.75);
+    text-transform: uppercase;
+    transition: 0.5s;
+    top: 8px;
+    left: 0;
+}
+.form-group .form-input:valid ~ .form-label,
+.form-group .form-input:focus ~ .form-label{
+    // display: block;
+    position: absolute;
+    left: 0;
+    color: cyan;
+    transform: translateY(-22px);
+    font-size: 15px;
+    padding: 0 6px;
+    background: rgb(53, 53, 53);
+    border-radius: 5px;
+}
+.input-valid{
+    color: cyan;
+    transform: translateY(-22px);
+    font-size: 15px;
+    padding: 0 6px;
+    background: rgb(53, 53, 53);
+    border-radius: 5px;
+}
+.dropdown {
+    position: relative;
+    width: 300px;
+    height: 50px;
+}
+.dropdown::before{
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 10000;
+    width: 8px;
+    height: 8px;
+    border: 2px solid rgb(43, 43, 43);
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(-45deg);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.dropdown.active::before{
+    top: 22px;
+    transform: rotate(-225deg);
+}
+.dropdown.active .form-label-cat,
+.form-group .form-input:focus ~ .form-label-cat,
+.form-group .form-input:valid ~ .form-label-cat {
+    color: cyan;
+    transform: translateY(-22px);
+    font-size: 15px;
+    padding: 0 6px;
+    background: rgb(53, 53, 53);
+    border-radius: 5px;
+}
+.dropdown input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: rgb(43,43,43);
+    border: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-radius: 10px;
+}
+.dropdown .option {
+    position: absolute;
+    top: 36px;
+    width: 100%;
+    background: rgb(43,43,43);
+    font-size: 15px;
+    font-weight: 600;
+    vertical-align: center;
+    color: rgba($color: rgb(255, 255, 255), $alpha: 0.75);
+    text-transform: uppercase;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-radius: 10;
+    overflow: hidden;
+    display: none;
+}
+.dropdown.active .option{
+    display: block;
+}
+.dropdown .option div{
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover{
+        background: rgba($color: white, $alpha: 0.5);
+        color: rgba($color: white, $alpha: 1);
+        font-size: 16px;
+    }
+}
+.infotable{
+    border-collapse: collapse;
+    // box-shadow: 0 5px 10px gray;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 50px;
+    overflow: hidden;
+    // thead{
+    //     box-shadow: 0 5px 10px gray;
+    // }
+    .tab-head{
+        background-color: #343a40;
+        color: white;
+        padding: 1rem 2rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-size: 0.8rem;
+    }
+    .tab-items{
+        padding: 0.5rem 2rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        i{
+            color: black;
+        }
+    }
+    tr:nth-child(even){
+        background-color: rgba($color: #343a40, $alpha: 0.85);;
+        color: white;
+    }
+}
+.button {
+    width: 100%;
+    margin-bottom: 10px;
+    background: rgb(68, 68, 68);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    border: none;
+    border-radius: 5pt;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover {
+        background: rgba($color: cyan, $alpha: 0.75);
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+.add-btn{
+    background-color: rgb(105, 175, 0);
+}
+.update-btn{
+    background-color: rgb(228, 148, 0);
+}
+#donutchart{
+    position: relative;
+}
+#donutchart, #chart{
+    height: 300px;
+    width: 400px;
+    font-family:Arial;
+}
+#labelOverlay {
+    width: 90px;
+    height: 45px;
+    position: absolute;
+    top: 233px;
+    left: 205px;
+    text-align: center;
+    cursor: pointer;
+}
+#labelOverlay p.used-size {
+    color: black;
+    line-height: 0.5;
+    font-size: 20pt;
+    padding:0;
+    margin: 8px;
+}

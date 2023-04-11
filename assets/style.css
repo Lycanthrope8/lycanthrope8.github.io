@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  font-size: 14px;
+  line-height: 1.8;
+  background: linear-gradient(135deg, rgb(50, 50, 50), black);
+  font-weight: 400;
+  font-family: "poppins", sans-serif;
+  margin: 0px;
+}
+
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  position: relative;
+  width: 250px;
+}
+.form-group .fn .mn {
+  display: flex;
+  width: 50%;
+}
+
+input {
+  width: 100%;
+  background-color: unset;
+  font-family: "Poppins", "helvetica", sans-serif;
+  font-size: 1em;
+  color: #fff;
+  font-weight: bold;
+}
+
+.form-label {
+  text-transform: uppercase;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.25);
+  left: 0;
+}
+
+.form-input:not(:-moz-placeholder-shown) + .form-label {
+  transform: translateX(1em) scale(0.8);
+}
+
+.form-input:not(:-ms-input-placeholder) + .form-label {
+  transform: translateX(1em) scale(0.8);
+}
+
+.form-input:focus + .form-label, .form-input:not(:placeholder-shown) + .form-label {
+  transform: translateX(1em) scale(0.8);
+}
+
+.submit {
+  width: auto;
+  background: rgb(68, 68, 68);
+  color: #fff;
+  padding: 15px 30px;
+  font-weight: bold;
+  font-size: large;
+  border: none;
+  border-radius: 5pt;
+  cursor: pointer;
+}
+.submit:hover {
+  background: #cccc00;
+}/*# sourceMappingURL=style.css.map */
